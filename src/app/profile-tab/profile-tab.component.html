@@ -1,0 +1,44 @@
+<p [ngClass]="['profile__text_centr']">Изменить настройки</p>
+
+<div [ngStyle]="{ 'width': width +'px',
+                  'height': height + 'px',
+                  'background-color': 'white',
+                  'margin': 'auto',
+                  'margin-bottom': '100px',
+                  'display': 'flex',
+                  'align-items': 'center',
+                  'justify-content': 'center',
+                  'border-radius': '10px' }" [ngClass]="{ 'profile__open': full }">
+  <div class="change">
+    <div [ngClass]="['profile__main-tab']">
+      <div [ngClass]="['profile__msg']">
+        <img src="assets/mailbox2.png" alt="mailbox">
+        <p class="profile__option">Эл. почта для получения счетов</p>
+      </div>
+      <div [ngClass]="['profile__btn']">
+        <button class="btn btn-warning" (click)="changeDivSize()">Изменить</button>
+      </div>
+    </div>
+    <!-- Hidden text -->
+    <div [ngClass]="{ 'profile__hidden-text': !full, 'profile__show-text': full }">
+      <div class="option__email-list">
+        <p>Емайл для получения счетов :</p>
+        <app-list-manager></app-list-manager>
+      </div>
+      <div class="profile__btn">
+        <button (click)="addAddress()"
+          class="profile__btn"
+          [ngClass]="{'profile__btn-receive-notifications': addAddressClicked,
+          'profile__btn-not-receive-notifications': !addAddressClicked}">
+          Сообщение об оплате</button>
+      </div>
+      <div class="profile__btn">
+        <button class="btn btn-danger profile__btn-style" (click)="changeDivSize()">Отменить</button>
+        <button class="btn btn-primary" (click)="changeDivSize()">Сохранить</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

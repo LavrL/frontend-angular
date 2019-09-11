@@ -1,0 +1,51 @@
+<div class="content">
+  <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit($event)" #myForm="ngForm" class="input-form"> -->
+  <form class="input-form" [formGroup]="signinForm">
+    <h1 class="input-form__title input-form__title_big">{{ 'MAIN.WELCOME-TEXT' | translate }}</h1>
+    <!-- <div class="input-form__error-message"></div> -->
+
+    <span class="error">{{ errorMessage }}</span>
+    <div class="form-group">
+      <label for="email" class="input-form__field">
+        <span class="input-form__text-label">{{ 'MAIN.EMAIL' | translate }}</span></label>
+      <input value=""
+        formControlName="email"
+        name="email"
+        class="input-form__text-input"
+        type="text" autocomplete="on">
+      <span *ngIf="!signinForm.get('email').valid && signinForm.get('email').touched"
+      class="help-block">
+      {{ 'ERROR.EMAIL-INCORRECT' | translate }}
+      </span>
+    </div>
+
+    <label for="password" class="input-form__field">
+      <span class="input-form__text-label">{{ 'MAIN.PASSWORD' | translate }}</span></label>
+    <input value="" name="password" formControlName="password" class="input-form__text-input" type="password"
+      autocomplete="on">
+    <span *ngIf="!signinForm.get('password').valid && signinForm.get('password').touched"
+      class="help-block">
+      {{ 'ERROR.PASSWORD-INCORRECT' | translate }}
+      </span>
+
+    <div class="input-form__field">
+      <button type="submit" (click)="userLogin(signinForm.value)" class="input-form__button input-form__button_orange">{{ 'MAIN.LOGIN' | translate }}</button>
+    </div>
+
+    <!-- <div class="input-form__field">
+      <a routerLink="/register" class="input-form__link input-form__link_underlined">Register</a>
+    </div> -->
+    <p class="content__text-center">{{ 'MAIN.OR' | translate }}</p>
+
+    <div class="input-form__field">
+      <button class="input-form__button input-form__button_blue" (click)="facebookLogin()">{{ 'MAIN.LOGINFB' | translate }}</button>
+    </div>
+    <div class="input-form__field">
+      <button class="input-form__button input-form__button_red" (click)="googleLogin()">{{ 'MAIN.LOGINGG' | translate }}</button>
+    </div>
+    <div class="input-form__field">
+      <button class="input-form__button input-form__button_lightskyblue" (click)="twitterLogin()">{{ 'MAIN.LOGINTW' | translate }}</button>
+    </div>
+
+  </form>
+</div>

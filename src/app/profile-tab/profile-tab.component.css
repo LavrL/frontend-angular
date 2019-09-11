@@ -1,0 +1,87 @@
+body {
+  background-color: blue;
+}
+.profile__text_centr {
+  text-align: center;
+  font-size: 20px;
+}
+.profile__btn {
+  align-items: flex-end;
+}
+.profile__msg {
+  display: flex;
+}
+.profile__main-tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.profile__open {
+  padding-top: 20px;
+  align-items: flex-start !important
+}
+.profile__option{
+  padding-left: 15px;
+  margin-top: auto;
+}
+.profile__hidden-text{
+  display: none;
+}
+.profile__show-text{
+  display: block;
+}
+.btn {
+  color: white;
+}
+.option__email-list{
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: baseline;
+}
+.option__btn-add{
+  margin-top: 15px;
+}
+.profile__btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+.profile__btn-style {
+  margin-right: 15px;
+}
+.btn {
+  border-radius: 15px;
+  /* background-color: white;
+  border-color: black;
+  color: black; */
+}
+.profile__btn {
+  /* background-color: white; */
+  border-color: black;
+  color: black;
+  border-radius: 15px;
+  margin-bottom: 15px;
+
+}
+.profile__btn-receive-notifications {
+  background: #f0f0f0 url(../../assets/tick.png) no-repeat;
+  background-position: 8px 8px;
+  padding: 8px 8px 8px 32px;
+}
+.profile__btn-not-receive-notifications {
+  background: #f0f0f0 url(../../assets/notclicked.png) no-repeat;
+  background-position: 8px 8px;
+  padding: 8px 8px 8px 32px;
+}
+*:focus {
+  outline: none;
+}
+
+

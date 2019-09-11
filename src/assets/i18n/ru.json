@@ -1,0 +1,19 @@
+{
+  "HEADER": {
+    "TITLE-BUTTON": "Бесплатная регистрация"
+  },
+  "MAIN": {
+    "WELCOME-TEXT" : "Добро пожаловать",
+    "EMAIL" : "Эл. почта",
+    "PASSWORD" : "пароль",
+    "LOGIN" : "Логин",
+    "LOGINFB" : "Логин через Facebook",
+    "LOGINGG" : "Логин через Google",
+    "LOGINTW" : "Логин через Twitter",
+    "OR" : "ИЛИ"
+  },
+  "ERROR": {
+    "EMAIL-INCORRECT": "Введите эл. почту",
+    "PASSWORD-INCORRECT": "Введите пароль"
+  }
+}

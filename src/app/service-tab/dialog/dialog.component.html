@@ -1,0 +1,41 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+  <div [class]="[ 'service-list-item' ]">
+    <div [ngStyle]="{
+    'padding': '40px',
+    'background-color': 'white',
+    'flex-direction': 'column',
+    'margin': 'auto',
+    'display': 'flex',
+    'justify-content': 'center',
+    'border-radius': '10px',
+    'border': '2px solid' }">
+      <div class="service-list" [ngStyle]="{ 'justify-content': 'unset' }">
+        <div class="service-list-item-image">
+          <img src="../assets/internet.png" alt="">
+        </div>
+        <div class="service-list-item-description">
+          <span class="service-list-item_bold">Оптический интернет</span>
+          <span>До {{ speedDialog }} Мбит</span>
+        </div>
+      </div>
+      <div class="service-list-item-plis-sign">
+        <img src="../assets/plussign.png" alt="">
+      </div>
+      <div class="service-list" [ngStyle]="{ 'justify-content': 'unset' }">
+        <div class="service-list-item-image">
+          <img src="../assets/tv.png" alt="">
+        </div>
+        <div class="service-list-item-description">
+          <span class="service-list-item_bold">Интерактивное TV</span>
+          <span>Кол-во каналов: {{ channelDialog }}</span>
+        </div>
+      </div>
+      <div>
+        <input appDialogBorder style="width: 100%" type="text" placeholder="Номер телефона">
+      </div>
+      <button (click)="close()" type="button" class="btn btn-warning">Узнать цену</button>
+    </div>
+  </div>
+  <button (click)="close()" aria-label="Close"
+  class="dialog__close-btn">X</button>
+</div>

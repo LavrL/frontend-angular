@@ -1,0 +1,19 @@
+{
+  "HEADER": {
+    "TITLE-BUTTON": "SIGN UP FOR FREE"
+  },
+  "MAIN": {
+    "WELCOME-TEXT" : "Welcome",
+    "EMAIL" : "email",
+    "PASSWORD" : "password",
+    "LOGIN" : "Login",
+    "LOGINFB" : "Login with Facebook",
+    "LOGINGG" : "Login with Google",
+    "LOGINTW" : "Login with Twitter",
+    "OR" : "OR"
+  },
+  "ERROR": {
+    "EMAIL-INCORRECT": "Email is required",
+    "PASSWORD-INCORRECT": "Password is required"
+  }
+}

@@ -1,1 +1,126 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #eeeeee;
+  font-family: "Arial", "Times New Roman", serif;
+  font-size: 14px;
+}
+
+.main-page-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-form {
+  width: 305px;
+  background: white;
+  padding: 50px;
+  border-top: 5px solid #fca311;
+  border-bottom: 5px solid #fca311;
+  display: block;
+}
+
+.input-form__title {
+  color: #14213d;
+  margin: 0;
+}
+
+.input-form__title_big {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.input-form__field {
+  margin-top: 10px;
+  /* padding-bottom: 5px; */
+  display: block;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.input-form__text-label {
+  color: #14213d;
+  font-weight: 400;
+}
+
+.input-form__text-input {
+  width: 100%;
+  height: 23px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: 1px solid #14213d;
+}
+
+.input-form__fieldText {
+  text-align: left;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.input-form__text-input:focus {
+  border: 1px solid #fca311;
+  outline: none;
+}
+
+.input-form__button {
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 8px;
+  /* outline: none; */
+  cursor: pointer;
+  color:white;
+  outline: 0;
+}
+
+.input-form__button:focus {
+  outline: 0;
+}
+
+.input-form__button_orange {
+  border: 1px solid #fca311;
+  background-color: #fca311;
+  background-image: linear-gradient(-245deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.input-form_link {
+  color: black;
+  font-size: 16px;
+}
+
+.input-form__link_underlined {
+  text-decoration: underline;
+}
+
+.input-form__error-message {
+  color: red;
+}
+.invalid-feedback {
+  padding-top: 5px;
+  font-size: 80%;
+  color: #dc3545;
+}
+
+@media only screen and (max-width: 600px) {
+  .input-form {
+      width: 100%;
+      padding: 50px 60px;
+  }
+  .input-form__title_big {
+      font-size: 28px;
+  }
+  .input-form__field {
+      margin-top: 25px;
+  }
+  .input-form__text-input {
+      height: 30px;
+  }
+  .input-form__button {
+      height: 50px;
+      font-size: 18px;
+  }
+}

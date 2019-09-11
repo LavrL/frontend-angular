@@ -1,0 +1,48 @@
+.header {
+  background-color: #eeeeee;
+  padding: 20px;
+  width: 100%;
+  border-bottom: 5px solid #fca311;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header .title-left {
+  font-size: 26px;
+}
+.header .middle-side {
+  font-size: 20px;
+  align-items: baseline;
+}
+
+.header .title_logout {
+  font-size: 18px;
+  color: black;
+  padding-right: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.header .right-side {
+  display: flex;
+  flex-direction: row;
+}
+.lang {
+  font-size: 18px;
+  padding-right: 15px;
+  padding-left: 10px;
+  text-decoration: none;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.lang:hover{
+  text-decoration: underline;
+}
+.link-style {
+  color: #273747;
+  text-decoration: none;
+  cursor: pointer;
+}

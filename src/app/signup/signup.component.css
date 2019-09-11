@@ -1,0 +1,26 @@
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  height: 80vh;
+}
+.content__text-center {
+  text-align: center;
+  color: black;
+  margin-bottom: 0px;
+  padding-top: 5px;
+}
+.input-form__button_blue {
+  background-color: #559AD1
+}
+.input-form__button_red {
+  background-color: red;
+}
+.input-form__button_lightskyblue {
+  background-color: lightskyblue;
+}
+.help-block {
+  color: red;
+}
+
