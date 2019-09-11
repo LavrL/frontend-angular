@@ -1,10 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { trigger, style, animate, transition} from '@angular/animations';
 
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.css'],
+  encapsulation: ViewEncapsulation.Emulated,
   animations: [
     trigger('dialog', [
       transition('void => *', [

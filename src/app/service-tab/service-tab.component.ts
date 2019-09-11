@@ -11,6 +11,27 @@ export class ServiceTabComponent implements OnInit {
   totalSpeed: number;
   channels = 54;
   totalChannels: number;
+
+  services = [
+    {
+      internetTitle: 'Оптический интернет',
+      speed: 50,
+      tvTitle: 'Аналоговое TV',
+      channels: 54
+    },
+    {
+      internetTitle: 'Оптический интернет',
+      speed: 100,
+      tvTitle: 'Аналоговое TV',
+      channels: 108
+    },
+    {
+      internetTitle: 'Оптический интернет',
+      speed: 250,
+      tvTitle: 'Аналоговое TV',
+      channels: 162
+    }
+  ];
   constructor() { }
 
   ngOnInit() {

@@ -24,7 +24,6 @@
             <span>До {{ speed }} Мбит</span>
           </div>
         </li>
-
         <li [class]="['service-list-item']">
           <div class="service-list-item-image">
             <img src="../assets/tv.png" alt="">
@@ -40,7 +39,7 @@
 
   <p [ngClass]="['service__text_centr']">Изменить услуги</p>
   <ul class="service-list">
-    <li [class]="[ 'service-list-item' ]">
+    <li [class]="[ 'service-list-item' ]" *ngFor="let service of services">
       <div [ngStyle]="{
       'padding': '40px',
       'background-color': 'white',
@@ -55,11 +54,10 @@
             <img src="../assets/internet.png" alt="">
           </div>
           <div class="service-list-item-description">
-            <span class="service-list-item_bold">Оптический интернет</span>
-            <span>До {{ speed }} Мбит</span>
+            <span class="service-list-item_bold">{{ service.internetTitle }}</span>
+            <span>До {{ service.speed }} Мбит</span>
           </div>
         </div>
-
         <div class="service-list-item-plis-sign">
           <img src="../assets/plussign.png" alt="">
         </div>
@@ -68,82 +66,14 @@
             <img src="../assets/tv.png" alt="">
           </div>
           <div class="service-list-item-description">
-            <span class="service-list-item_bold">Аналоговое TV</span>
-            <span>Кол-во каналов: {{ channels }}</span>
+            <span class="service-list-item_bold">{{ service.tvTitle}}</span>
+            <span>Кол-во каналов: {{ service.channels }}</span>
           </div>
         </div>
-        <button (click)="showDialog = !showDialog" (click)="totalSpeed = speed"
-        (click)="totalChannels = channels" type="button" class="btn btn-warning">Узнать цену</button>
-      </div>
-    </li>
-    <li [class]="[ 'service-list-item' ]">
-      <div [ngStyle]="{
-      'padding': '40px',
-      'background-color': 'white',
-      'flex-direction': 'column',
-      'margin': 'auto',
-      'display': 'flex',
-      'justify-content': 'center',
-      'border-radius': '10px' }">
-        <div class="service-list">
-          <div class="service-list-item-image">
-            <img src="../assets/internet.png" alt="">
-          </div>
-          <div class="service-list-item-description">
-            <span class="service-list-item_bold">Оптический интернет</span>
-            <span>До {{ speed + speed  }} Мбит</span>
-          </div>
-        </div>
-
-        <div class="service-list-item-plis-sign">
-          <img src="../assets/plussign.png" alt="">
-        </div>
-        <div class="service-list" [ngStyle]="{ 'justify-content': 'unset' }">
-          <div class="service-list-item-image">
-            <img src="../assets/tv.png" alt="">
-          </div>
-          <div class="service-list-item-description">
-            <span class="service-list-item_bold">Аналоговое TV</span>
-            <span>Кол-во каналов: {{ channels*2 }}</span>
-          </div>
-        </div>
-        <button (click)="showDialog = !showDialog" (click)="totalSpeed = speed + speed"
-        (click)="totalChannels = channels*2" type="button" class="btn btn-warning">Узнать цену</button>
-      </div>
-    </li>
-    <li [class]="[ 'service-list-item' ]">
-      <div [ngStyle]="{
-      'padding': '40px',
-      'background-color': 'white',
-      'flex-direction': 'column',
-      'margin': 'auto',
-      'display': 'flex',
-      'justify-content': 'center',
-      'border-radius': '10px' }">
-        <div class="service-list">
-          <div class="service-list-item-image">
-            <img src="../assets/internet.png" alt="">
-          </div>
-          <div class="service-list-item-description">
-            <span class="service-list-item_bold">Оптический интернет</span>
-            <span>До {{ speed*5}} Мбит</span>
-          </div>
-        </div>
-
-        <div class="service-list-item-plis-sign">
-          <img src="../assets/plussign.png" alt="">
-        </div>
-        <div class="service-list" [ngStyle]="{ 'justify-content': 'unset' }">
-          <div class="service-list-item-image">
-            <img src="../assets/tv.png" alt="">
-          </div>
-          <div class="service-list-item-description">
-            <span class="service-list-item_bold">Аналоговое TV</span>
-            <span>Кол-во каналов: {{ channels*3 }}</span>
-          </div>
-        </div>
-        <button (click)="showDialog = !showDialog" (click)="totalSpeed = speed*5"
-        (click)="totalChannels = channels*3" type="button" class="btn btn-warning">Узнать цену</button>
+        <button (click)="showDialog = !showDialog"
+                (click)="totalSpeed = service.speed"
+                (click)="totalChannels = service.channels"
+          type="button" class="btn btn-warning">Узнать цену</button>
       </div>
     </li>
   </ul>
