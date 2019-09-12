@@ -27,6 +27,7 @@ import { TodoListService } from './profile-tab/services/todo-list.service';
 import { ProfileTabComponent } from './profile-tab/profile-tab.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogDirective } from '../app/service-tab/dialog/dialog.directive';
+import { FormsModule } from '@angular/forms';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -67,6 +68,8 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     ListManagerModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     TranslateModule.forRoot({
       loader: {

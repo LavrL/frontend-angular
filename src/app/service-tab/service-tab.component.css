@@ -2,9 +2,13 @@ body {
   background-color: blue;
 }
 
+.service__item {
+  padding: 40px;
+}
 .service__text_centr {
   text-align: center;
-  font-size: 20px;
+  font-size: 26px;
+  margin-top: 15px;
 }
 
 .service__address {
@@ -56,6 +60,7 @@ ul {
 
 .service-list-item-description {
   display: block;
+  margin-bottom: 15px;
 }
 
 .service-list-item_bold {
@@ -68,7 +73,9 @@ ul {
 }
 .service-list-item-plis-sign {
   text-align: center;
+  margin-bottom: 15px;
 }
 ul li:last-child {
   margin-right: 0;
 }
+

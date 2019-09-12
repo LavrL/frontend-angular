@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { trigger, style, animate, transition} from '@angular/animations';
+import { trigger, style, animate, transition } from '@angular/animations';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-dialog',
@@ -13,21 +14,26 @@ import { trigger, style, animate, transition} from '@angular/animations';
         animate(100)
       ]),
       transition('* => void', [
-        animate(100, style({ transform: 'scale3d(.0,.0,.0'}))
+        animate(100, style({ transform: 'scale3d(.0,.0,.0' }))
       ])
     ]
     )
   ]
 })
 export class DialogComponent implements OnInit {
-@Input() closable = true;
-@Input() visible: boolean;
-@Input() speedDialog: number;
-@Input() channelDialog: number;
+  @Input() closable = true;
+  @Input() visible: boolean;
+  @Input() speedDialog: number;
+  @Input() channelDialog: number;
 
-  constructor() { }
+  inputForm: FormGroup;
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.inputForm = new FormGroup({
+      phone: new FormControl(null, [Validators.required, Validators.pattern(/^(?=.*(?:(?:\d[ -]?){1,12}))\d(?:[0-9 -]*\d)?$/)])
+    });
   }
   close() {
     this.visible = false;
