@@ -14,21 +14,21 @@ export class ServiceTabComponent implements OnInit {
 
   services = [
     {
-      internetTitle: 'Оптический интернет',
+      internetTitle: 'Optical internet',
       speed: 50,
-      tvTitle: 'Аналоговое TV',
+      tvTitle: 'Analog TV',
       channels: 54
     },
     {
-      internetTitle: 'Оптический интернет',
+      internetTitle: 'Optical internet',
       speed: 100,
-      tvTitle: 'Аналоговое TV',
+      tvTitle: 'Analog TV',
       channels: 108
     },
     {
-      internetTitle: 'Оптический интернет',
+      internetTitle: 'Optical internet',
       speed: 250,
-      tvTitle: 'Аналоговое TV',
+      tvTitle: 'Analog TV',
       channels: 162
     }
   ];

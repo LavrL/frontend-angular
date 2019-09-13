@@ -1,1 +1,88 @@
-<p>This is content component</p>
+<div class="container">
+
+  <div [ngStyle]="{
+                  'background-color': 'white',
+                  'flex-direction': 'row',
+                  'margin': 'auto',
+                  'display': 'flex',
+                  'padding-left': '40px',
+                  'justify-content': 'center',
+                  'margin-right': '20px',
+                  'margin-left': '20px',
+                  'margin-top': '30px',
+                  'padding-bottom': '30px',
+                  'border-radius': '10px' }">
+
+    <div [class]="['main__invoice']">
+      <p [ngClass]="['main__invoice-text']">Invoices </p>
+      <span><a href="#"> Review all invoices > </a> </span>
+    </div>
+
+    <div class="main__invoice-title">
+      <p>All invoices are done</p>
+    </div>
+
+  </div>
+
+  <div class="main__discounts">
+    <div [ngStyle]="{
+    'background-color': 'white',
+    'flex-direction': 'column',
+    'display': 'flex',
+    'padding-left': '20px',
+    'padding-right': '20px',
+    'justify-content': 'center',
+    'margin-right': '20px',
+    'margin-left': '20px',
+    'margin-top': '30px',
+    'width': '30%',
+    'padding-bottom': '30px',
+    'border-radius': '10px' }">
+      <p class="main__discounts-title"> Discounts for You and Your friend!</p>
+      <div class="main__discounts-content">
+        <div ><img class="main__discounts-image"
+          src="../../assets/friends-icon.png" alt=""></div>
+        <ul class="main__discounts-steps">
+          <li class="main__discounts-step">Step 1: test</li>
+          <li class="main__discounts-step">Step 2: test</li>
+          <li class="main__discounts-step"> Step 3: test</li>
+        </ul>
+      </div>
+      <div class="main__discounts-button">
+        <button class="btn btn-warning">Receive discount</button>
+      </div>
+    </div>
+    <div [ngStyle]="{
+      'background-color': 'white',
+      'flex-direction': 'column',
+      'display': 'flex',
+      'padding-left': '40px',
+      'padding-right': '40px',
+      'padding-bottom': '30px',
+      'justify-content': 'center',
+      'margin-right': '20px',
+      'width': '70%',
+      'margin-left': '20px',
+      'margin-top': '30px',
+      'border-radius': '10px' }">
+      <p class="main__discounts-title"> Discounts of this Month</p>
+      <ul class="main__discounts-content">
+        <li class="main__discounts-item">
+          <img class="main__discounts-steps-image" src="../../assets/hilton_icon.png" alt="">
+          <p class="main__discounts-steps-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        </li>
+        <li class="main__discounts-item">
+          <img class="main__discounts-steps-image" src="../assets/hilton_icon.png" alt="">
+          <p class="main__discounts-steps-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </li>
+        <li class="main__discounts-item">
+          <img class="main__discounts-steps-image" src="../assets/hilton_icon.png" alt="">
+          <p class="main__discounts-steps-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </li>
+      </ul>
+      <div class="main__discounts-button">
+        <button class="btn btn-warning">Receive discount</button>
+      </div>
+    </div>
+  </div>
+</div>

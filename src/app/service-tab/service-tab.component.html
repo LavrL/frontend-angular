@@ -1,5 +1,5 @@
 <div class="container">
-  <p [ngClass]="['service__text_centr']">Подключенные услуги</p>
+  <p [ngClass]="['service__text_centr']">Attached services</p>
 
   <div [ngStyle]="{
                   'background-color': 'white',
@@ -10,7 +10,7 @@
                   'justify-content': 'center',
                   'border-radius': '10px' }" >
     <div [class]="['service__address']">
-      <p [ngClass]="['service__border-text']">Адрес подключения: </p>
+      <p [ngClass]="['service__border-text']">Main address: </p>
       <button class="service__border-address">Riga, Dolomita 21, dz. 58</button>
     </div>
     <div>
@@ -20,8 +20,8 @@
             <img src="../assets/internet.png" alt="">
           </div>
           <div class="service-list-item-description">
-            <span class="service-list-item_bold">Интернет</span>
-            <span>До {{ speed }} Мбит</span>
+            <span class="service-list-item_bold">Internet</span>
+            <span>Till {{ speed }} Mbit</span>
           </div>
         </li>
         <li [class]="['service-list-item']">
@@ -29,15 +29,15 @@
             <img src="../assets/tv.png" alt="">
           </div>
           <div class="service-list-item-description">
-            <span class="service-list-item_bold">Аналоговое TV</span>
-            <span>Кол-во каналов: 54</span>
+            <span class="service-list-item_bold">Analog TV</span>
+            <span>Number of channels: 54</span>
           </div>
         </li>
       </ul>
     </div>
   </div>
 
-  <p [ngClass]="['service__text_centr']">Изменить услуги</p>
+  <p [ngClass]="['service__text_centr']">Change services</p>
   <ul class="service-list">
     <li [class]="[ 'service-list-item' ]" *ngFor="let service of services">
       <div [ngStyle]="{
@@ -47,13 +47,13 @@
       'display': 'flex',
       'justify-content': 'center',
       'border-radius': '10px' }" class="service__item">
-        <div class="service-list">
+        <div class="service-list" [ngStyle]="{ 'justify-content': 'unset' }">
           <div class="service-list-item-image">
             <img src="../assets/internet.png" alt="">
           </div>
           <div class="service-list-item-description">
             <span class="service-list-item_bold">{{ service.internetTitle }}</span>
-            <span>До {{ service.speed }} Мбит</span>
+            <span>Till {{ service.speed }} Mbit</span>
           </div>
         </div>
         <div class="service-list-item-plis-sign">
@@ -65,11 +65,11 @@
           </div>
           <div class="service-list-item-description">
             <span class="service-list-item_bold">{{ service.tvTitle}}</span>
-            <span>Кол-во каналов: {{ service.channels }}</span>
+            <span>Number of channels: {{ service.channels }}</span>
           </div>
         </div>
         <button (click)="showDialog = !showDialog" (click)="totalSpeed = service.speed"
-          (click)="totalChannels = service.channels" type="button" class="btn btn-warning">Узнать цену</button>
+          (click)="totalChannels = service.channels" type="button" class="btn btn-warning">Find out price</button>
       </div>
     </li>
   </ul>

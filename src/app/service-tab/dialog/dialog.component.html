@@ -14,8 +14,8 @@
           <img src="../assets/internet.png" alt="">
         </div>
         <div class="service-list-item-description">
-          <span class="service-list-item_bold">Оптический интернет</span>
-          <span>До {{ speedDialog }} Мбит</span>
+          <span class="service-list-item_bold">Optical Internet</span>
+          <span>Till {{ speedDialog }} Mbit</span>
         </div>
       </div>
       <div class="service-list-item-plis-sign">
@@ -26,18 +26,20 @@
           <img src="../assets/tv.png" alt="">
         </div>
         <div class="service-list-item-description">
-          <span class="service-list-item_bold">Интерактивное TV</span>
-          <span>Кол-во каналов: {{ channelDialog }}</span>
+          <span class="service-list-item_bold">Analog TV</span>
+          <span>Number of channels:: {{ channelDialog }}</span>
         </div>
       </div>
       <div >
         <form  [formGroup]="inputForm">
-          <input appDialogBorder style="width: 100%; font-size:14px; margin-bottom: 5px;" formControlName="phone" type="text" placeholder="Номер телефона">
+          <input appDialogBorder style="width: 100%; font-size:14px; margin-bottom: 5px;" formControlName="phone" type="text" placeholder="Phone number">
           <span style="display: block; color: red; padding-top: 5px; padding-bottom: 5px;"
           *ngIf="!inputForm.get('phone').valid && inputForm.get('phone').touched" class="help-block">Only numbers!</span>
           <div class="text-center">
-            <button (click)="close()" (click)="inputForm.reset()" type="button" class="btn btn-warning ">Узнать
-              цену</button>
+            <button (click)="close()"
+                    (click)="inputForm.reset()"
+                    type="button"
+                    class="btn btn-warning ">Find out price</button>
           </div>
         </form>
       </div>

@@ -1,3 +1,96 @@
-.nav-item {
-  color: black;
+body {
+  background-color: blue;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__invoice {
+  width: 30%;
+}
+
+.main__invoice-text {
+  font-size: 24px;
+}
+
+.main__invoice-title {
+  width: 70%;
+  font-size: 24px;
+  color: orange;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__discounts {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+
+.main__discounts-title {
+  font-size: 26px;
+  text-align: center;
+}
+
+.main__discounts-content {
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.main__discounts-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__discounts-steps {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.main__discounts-step {
+  margin-bottom: 5px;
+}
+
+.main__discounts-step:last-child {
+  margin-bottom: 0px;
+}
+
+.main__discounts-steps-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 100%;
+}
+
+.main__discounts-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.main__discounts-steps-text {
+  text-align: center;
+}
+
+.main__discounts-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.main__discounts-item:last-child {
+  margin-right: 0px;
+}
+
+ul {
+  padding-left: 0px;
 }
