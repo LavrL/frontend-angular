@@ -1,11 +1,11 @@
 import { Injectable, Inject } from '@angular/core';
 import { ToDoItem } from '../interfaces/todo-item';
 
-const defaultTodoList = [
-  {
-    title: 'Install Windows 7'
-  }
-];
+// const defaultTodoList = [
+//   {
+//     title: 'Install Windows 7'
+//   }
+// ];
 
 @Injectable({
   providedIn: 'root'
