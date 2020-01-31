@@ -1,7 +1,22 @@
-# FrontendAngular
+# Authentication with Firebase and e-services on Angular 2+
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
+Simple example of using authentication with Firebase and e-services on Angular 2+.
 
-## Development server
+### [View the demo](https://frontend-angular.netlify.com/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Used
+
+- [i18n](https://angular.io/guide/i18n)
+- [Firebase Google](https://firebase.google.com/)
+
+## Run locally
+```bash
+git clone https://github.com/LavrL/frontend-angular.git
+cd frontend-angular
+npm i
+
+ng serve
+```
+
+Navigate to `http://localhost:4200/`.
+
