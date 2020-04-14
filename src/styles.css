@@ -73,7 +73,7 @@ body {
   border-radius: 8px;
   /* outline: none; */
   cursor: pointer;
-  color:white;
+  color: white;
   outline: 0;
 }
 
@@ -99,6 +99,7 @@ body {
 .input-form__error-message {
   color: red;
 }
+
 .invalid-feedback {
   padding-top: 5px;
   font-size: 80%;
@@ -107,20 +108,20 @@ body {
 
 @media only screen and (max-width: 600px) {
   .input-form {
-      width: 100%;
-      padding: 50px 60px;
+    width: 100%;
+    padding: 50px 60px;
   }
   .input-form__title_big {
-      font-size: 28px;
+    font-size: 28px;
   }
   .input-form__field {
-      margin-top: 25px;
+    margin-top: 25px;
   }
   .input-form__text-input {
-      height: 30px;
+    height: 30px;
   }
   .input-form__button {
-      height: 50px;
-      font-size: 18px;
+    height: 50px;
+    font-size: 18px;
   }
 }

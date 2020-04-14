@@ -1,8 +1,6 @@
 <div class="content">
-  <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit($event)" #myForm="ngForm" class="input-form"> -->
   <form class="input-form" [formGroup]="signinForm">
     <h1 class="input-form__title input-form__title_big">{{ 'MAIN.WELCOME-TEXT' | translate }}</h1>
-    <!-- <div class="input-form__error-message"></div> -->
 
     <span class="error">{{ errorMessage }}</span>
     <div class="form-group">
@@ -32,9 +30,6 @@
       <button type="submit" (click)="userLogin(signinForm.value)" class="input-form__button input-form__button_orange">{{ 'MAIN.LOGIN' | translate }}</button>
     </div>
 
-    <!-- <div class="input-form__field">
-      <a routerLink="/register" class="input-form__link input-form__link_underlined">Register</a>
-    </div> -->
     <p class="content__text-center">{{ 'MAIN.OR' | translate }}</p>
 
     <div class="input-form__field">

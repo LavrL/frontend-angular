@@ -26,14 +26,8 @@ export class SignupComponent implements OnInit {
 
   registerNewUser(value) {
     this.authService.doRegister(value).then(
-      res => {
-        console.log(res);
-        this.successMessage = 'Your account was created';
-        console.log(this.successMessage);
-      },
-      err => {
-        console.log(err);
-      }
+      res => { this.successMessage = 'Your account was created';},
+      err => { console.log(err);}
     );
     this.signupForm.reset();
   }

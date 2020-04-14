@@ -29,12 +29,9 @@ export class SigninComponent implements OnInit {
       res => {
         this.signinForm.reset();
         this.router.navigate(['/user']);
-        console.log(res);
       },
       err => {
-        console.log('Error - ' + err);
         this.errorMessage = 'Invalid username or password';
-        console.log(this.errorMessage);
         this.signinForm.reset();
       }
     );
@@ -42,21 +39,21 @@ export class SigninComponent implements OnInit {
 
   googleLogin() {
     this.authService.doGoogleLogin().then(
-      res => {console.log(res); this.router.navigate(['/user']); },
-      err => {console.log(err); }
+      res => { this.router.navigate(['/user']); },
+      err => { console.log(err); }
     );
   }
 
   facebookLogin() {
     this.authService.doFacebookLogin().then(
-      res => {console.log(res); this.router.navigate(['/user']); },
-      err => {console.log(err); }
+      res => { this.router.navigate(['/user']); },
+      err => { console.log(err); }
     );
   }
   twitterLogin() {
     this.authService.doTwitterLogin().then(
       res => { this.router.navigate(['/user']); },
-      err => {console.log(err); }
+      err => { console.log(err); }
     );
   }
 }

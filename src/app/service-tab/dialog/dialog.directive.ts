@@ -1,4 +1,4 @@
-import { Directive, Input, ElementRef, HostListener, OnChanges } from '@angular/core';
+import { Directive, Input, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appDialogBorder]'
