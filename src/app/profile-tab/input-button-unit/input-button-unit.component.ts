@@ -33,7 +33,6 @@ export class InputButtonUnitComponent implements OnInit {
   }
 
   submitValue(newTitle: string) {
-    console.log('newTitle = ' + newTitle);
     if (this.inputForm.valid) {
       this.submit.emit(newTitle);
     }

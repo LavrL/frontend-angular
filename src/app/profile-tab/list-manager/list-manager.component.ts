@@ -22,7 +22,6 @@ export class ListManagerComponent implements OnInit {
 
   ngOnInit() {
     this.todoList = this.todoListService.getTodoList();
-    console.log(this.todoList);
   }
 
   addItem(title: string) {
