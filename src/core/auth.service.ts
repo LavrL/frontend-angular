@@ -45,7 +45,7 @@ export class AuthService {
           this.loggedIn = true;
         },
         err => {
-          observer.next(err);
+          observer.error(err);
         }
       )
     })
@@ -99,7 +99,7 @@ export class AuthService {
           observer.next(res);
         },
         err => {
-          observer.next(err);
+          observer.error(err);
         });
     });
   }
