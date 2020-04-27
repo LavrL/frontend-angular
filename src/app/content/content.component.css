@@ -9,6 +9,50 @@ body {
   align-items: center;
 }
 
+.header-top {
+  background-color: white;
+  flex-direction: row;
+  margin: auto;
+  display: flex;
+  padding-left: 40px;
+  justify-content: center;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+}
+
+.header-left {
+  background-color: white;
+  flex-direction: column;
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: center;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 30px;
+  width: 30%;
+  padding-bottom: 30px;
+  border-radius: 10px
+}
+
+.header-right {
+  background-color: white;
+  flex-direction: column;
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+  justify-content: center;
+  margin-right: 20px;
+  width: 70%;
+  margin-left: 20px;
+  margin-top: 30px;
+  border-radius: 10px
+}
+
 .main__invoice {
   width: 30%;
 }
