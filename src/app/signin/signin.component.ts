@@ -24,9 +24,10 @@ export class SigninComponent implements OnInit {
       password: new FormControl(null, [Validators.required, Validators.minLength(6)])
     });
   }
-  userLogin(value) {
-    this.authService.doLogin(value).then(
+  userLogin(value: { email: string, password: string }) {
+    this.authService.doLogin(value).subscribe(
       res => {
+
         this.signinForm.reset();
         this.router.navigate(['/user']);
       },

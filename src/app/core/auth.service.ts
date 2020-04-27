@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
 
 
 @Injectable()
@@ -23,7 +24,7 @@ export class AuthService {
     translate.use(browserLang.match(/en|ru/) ? browserLang : 'en');
   }
 
-  doRegister(value) {
+  doRegister(value: { email: string, password: string }) {
     return new Promise<any>((resolve, reject) => {
       firebase.auth().createUserWithEmailAndPassword(value.email, value.password).then(
         res => resolve(res),
@@ -32,21 +33,22 @@ export class AuthService {
     });
   }
 
-  doLogin(value) {
-    return new Promise<any>((resolve, reject) => {
+  doLogin(value: { email: string, password: string }): Observable<any> {
+    return Observable.create((observer: any) => {
       firebase.auth().signInWithEmailAndPassword(value.email, value.password).then(
         res => {
           firebase.auth().currentUser.getIdToken().then(
             (token: string) => this.token = token
           );
-          resolve(res);
+        
+          observer.next(res);
           this.loggedIn = true;
         },
         err => {
-          reject(err);
+          observer.next(err);
         }
-      );
-    });
+      )
+    })
   }
 
   getToken() {

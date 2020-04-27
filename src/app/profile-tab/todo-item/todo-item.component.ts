@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, Output, ViewChild, EventEmitter, ElementRef } from '@angular/core';
+import { Component, Input, Output, ViewChild, EventEmitter, ElementRef } from '@angular/core';
 import { ToDoItem } from '../interfaces/todo-item';
-import { AppModule } from 'src/app/app.module';
+//import { AppModule } from 'src/app/app.module';
 
 @Component({
   selector: 'app-todo-item',
@@ -13,7 +13,7 @@ import { AppModule } from 'src/app/app.module';
   </button>`,
   styleUrls: ['./todo-item.component.css']
 })
-export class TodoItemComponent implements OnInit {
+export class TodoItemComponent {
   @Input() item: ToDoItem;
   @Output() delete: EventEmitter<ToDoItem> = new EventEmitter();
   @ViewChild('textInput', { static: true }) textInput: ElementRef;
@@ -21,8 +21,6 @@ export class TodoItemComponent implements OnInit {
   isActive = false;
   constructor() { }
 
-  ngOnInit() {
-  }
   removeItem() {
     this.delete.emit(this.item);
   }

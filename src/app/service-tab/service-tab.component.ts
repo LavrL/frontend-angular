@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-service-tab',
   templateUrl: './service-tab.component.html',
   styleUrls: ['./service-tab.component.css']
 })
-export class ServiceTabComponent implements OnInit {
+export class ServiceTabComponent {
   showDialog = false;
   speed = 50;
   totalSpeed: number;
@@ -32,9 +32,5 @@ export class ServiceTabComponent implements OnInit {
       channels: 162
     }
   ];
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

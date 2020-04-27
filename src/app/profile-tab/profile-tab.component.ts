@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-profile-tab',
   templateUrl: './profile-tab.component.html',
   styleUrls: ['./profile-tab.component.css']
 })
-export class ProfileTabComponent implements OnInit {
+export class ProfileTabComponent {
   title = 'profile-test';
   open = false;
   width = 600;
@@ -33,9 +33,6 @@ export class ProfileTabComponent implements OnInit {
     } else {
       this.addAddressClicked = true;
     }
-  }
-
-  ngOnInit() {
   }
 
 }
