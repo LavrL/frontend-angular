@@ -24,11 +24,11 @@ export class AuthService {
     translate.use(browserLang.match(/en|ru/) ? browserLang : 'en');
   }
 
-  doRegister(value: { email: string, password: string }) {
-    return new Promise<any>((resolve, reject) => {
+  doRegister(value: { email: string, password: string }): Observable<any> {
+    return Observable.create((observer: any) => {
       firebase.auth().createUserWithEmailAndPassword(value.email, value.password).then(
-        res => resolve(res),
-        err => reject(err)
+        res => observer.next(res),
+        err => observer.err(err)
       );
     });
   }
@@ -40,7 +40,7 @@ export class AuthService {
           firebase.auth().currentUser.getIdToken().then(
             (token: string) => this.token = token
           );
-        
+
           observer.next(res);
           this.loggedIn = true;
         },
@@ -69,8 +69,8 @@ export class AuthService {
     this.router.navigate(['/']);
   }
 
-  doGoogleLogin() {
-    return new Promise<any>((resolve, reject) => {
+  doGoogleLogin(): Observable<any> {
+    return Observable.create((observer: any) => {
       const provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope('profile');
       provider.addScope('email');
@@ -79,43 +79,43 @@ export class AuthService {
           firebase.auth().currentUser.getIdToken().then(
             (token: string) => this.token = token
           );
-          resolve(res);
+          observer.next(res);
         },
         err => {
-          reject(err);
+          observer.err(err);
         }
       );
     });
   }
 
-  doFacebookLogin() {
-    return new Promise<any>((resolve, reject) => {
+  doFacebookLogin(): Observable<any> {
+    return Observable.create((observer: any) => {
       const provider = new firebase.auth.FacebookAuthProvider();
       this.afAuth.auth.signInWithPopup(provider).then(
         res => {
           firebase.auth().currentUser.getIdToken().then(
             (token: string) => this.token = token
           );
-          resolve(res);
+          observer.next(res);
         },
         err => {
-          reject(err);
+          observer.err(err);
         });
     });
   }
 
   doTwitterLogin() {
-    return new Promise<any>((resolve, reject) => {
+    return Observable.create((observer: any) => {
       const provider = new firebase.auth.TwitterAuthProvider();
       this.afAuth.auth.signInWithPopup(provider).then(
         res => {
           firebase.auth().currentUser.getIdToken().then(
             (token: string) => this.token = token
           );
-          resolve(res);
+          observer.next(res);
         },
         err => {
-          reject(err);
+          observer.err(err);
         });
     });
   }

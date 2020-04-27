@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../core/auth.service';
+import { AuthService } from '../../core/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -24,8 +24,8 @@ export class SignupComponent implements OnInit {
     });
   }
 
-  registerNewUser(value) {
-    this.authService.doRegister(value).then(
+  registerNewUser(value: { email: string, password: string }) {
+    this.authService.doRegister(value).subscribe(
       res => { this.successMessage = 'Your account was created';},
       err => { console.log(err);}
     );

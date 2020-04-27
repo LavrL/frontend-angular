@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../core/auth.service';
+import { AuthService } from '../../core/auth.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
@@ -27,7 +27,6 @@ export class SigninComponent implements OnInit {
   userLogin(value: { email: string, password: string }) {
     this.authService.doLogin(value).subscribe(
       res => {
-
         this.signinForm.reset();
         this.router.navigate(['/user']);
       },
@@ -39,20 +38,20 @@ export class SigninComponent implements OnInit {
   }
 
   googleLogin() {
-    this.authService.doGoogleLogin().then(
+    this.authService.doGoogleLogin().subscribe(
       res => { this.router.navigate(['/user']); },
       err => { console.log(err); }
     );
   }
 
   facebookLogin() {
-    this.authService.doFacebookLogin().then(
+    this.authService.doFacebookLogin().subscribe(
       res => { this.router.navigate(['/user']); },
       err => { console.log(err); }
     );
   }
   twitterLogin() {
-    this.authService.doTwitterLogin().then(
+    this.authService.doTwitterLogin().subscribe(
       res => { this.router.navigate(['/user']); },
       err => { console.log(err); }
     );
