@@ -10,8 +10,8 @@ import { AuthService } from '../../core/auth.service';
 })
 export class SignupComponent implements OnInit {
   signupForm: FormGroup;
-  successMessage = '';
-  errorMessage = '';
+  successMessage: string = '';
+  errorMessage: string = '';
 
   constructor(router: Router, public authService: AuthService) { }
 
@@ -26,8 +26,8 @@ export class SignupComponent implements OnInit {
 
   registerNewUser(value: { email: string, password: string }) {
     this.authService.doRegister(value).subscribe(
-      res => { this.successMessage = 'Your account was created';},
-      err => { console.log(err);}
+      res => { this.successMessage = 'Your account was created'; },
+      err => { console.log(err); }
     );
     this.signupForm.reset();
   }

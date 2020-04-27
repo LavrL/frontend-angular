@@ -8,9 +8,9 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class AuthService {
-  loggedIn = false;
+  loggedIn: boolean = false;
   token: string;
-  lang = 'RU';
+  lang: string = 'RU';
 
   constructor(public afAuth: AngularFireAuth,
     private router: Router,
@@ -28,7 +28,7 @@ export class AuthService {
     return Observable.create((observer: any) => {
       firebase.auth().createUserWithEmailAndPassword(value.email, value.password).then(
         res => observer.next(res),
-        err => observer.err(err)
+        err => observer.error(err)
       );
     });
   }
@@ -82,7 +82,7 @@ export class AuthService {
           observer.next(res);
         },
         err => {
-          observer.err(err);
+          observer.error(err);
         }
       );
     });
@@ -99,7 +99,7 @@ export class AuthService {
           observer.next(res);
         },
         err => {
-          observer.err(err);
+          observer.next(err);
         });
     });
   }
@@ -115,7 +115,7 @@ export class AuthService {
           observer.next(res);
         },
         err => {
-          observer.err(err);
+          observer.error(err);
         });
     });
   }

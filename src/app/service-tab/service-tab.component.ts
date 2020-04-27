@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./service-tab.component.css']
 })
 export class ServiceTabComponent {
-  showDialog = false;
-  speed = 50;
+  showDialog: boolean = false;
+  speed: number = 50;
   totalSpeed: number;
-  channels = 54;
+  channels: number = 54;
   totalChannels: number;
 
   services = [

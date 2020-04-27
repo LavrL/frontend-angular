@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../core/auth.service';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
@@ -10,12 +10,13 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
 })
 export class SigninComponent implements OnInit {
   signinForm: FormGroup;
-  errorMessage = '';
+  errorMessage: string = '';
 
   constructor(
     public authService: AuthService,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private ngZone: NgZone
   ) { }
 
   ngOnInit() {
@@ -38,22 +39,23 @@ export class SigninComponent implements OnInit {
   }
 
   googleLogin() {
-    this.authService.doGoogleLogin().subscribe(
-      res => { this.router.navigate(['/user']); },
+    this.ngZone.run(() => this.authService.doGoogleLogin().subscribe(
+      res => { this.ngZone.run(() => this.router.navigate(['/user'])); },
       err => { console.log(err); }
-    );
+    ));
   }
 
   facebookLogin() {
-    this.authService.doFacebookLogin().subscribe(
-      res => { this.router.navigate(['/user']); },
+    this.ngZone.run(() => this.authService.doFacebookLogin().subscribe(
+      res => { this.ngZone.run(() => this.router.navigate(['/user'])); },
       err => { console.log(err); }
-    );
+    ));
   }
+
   twitterLogin() {
-    this.authService.doTwitterLogin().subscribe(
-      res => { this.router.navigate(['/user']); },
+    this.ngZone.run(() => this.authService.doTwitterLogin().subscribe(
+      res => { this.ngZone.run(() => this.router.navigate(['/user'])); },
       err => { console.log(err); }
-    );
+    ));
   }
 }
