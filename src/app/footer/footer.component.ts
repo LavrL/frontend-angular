@@ -6,10 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent {
-  count: number = 1;
+  name: string = "E-services, 2020";
+  place: string ="Riga, Latvia";
+  phone: string = "+371 29 831 905";
 
-  myfunc = () => {
-    let abc: string = '2'
-    return abc;
-  }
 }
