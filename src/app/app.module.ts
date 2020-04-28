@@ -14,7 +14,6 @@ import { FooterComponent } from './footer/footer.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../core/auth.service';
-import { UserTestComponent } from './user-test/user-test.component';
 import { AuthGuard } from '../core/auth-guard.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -51,7 +50,6 @@ const appRoutes: Routes = [
     SignupComponent,
     HeaderComponent,
     FooterComponent,
-    UserTestComponent,
     ContentComponent,
     ProfileTabComponent,
     ServiceTabComponent,
