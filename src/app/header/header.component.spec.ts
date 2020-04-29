@@ -34,7 +34,7 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should be created', () => {
     expect(component).toBeTruthy();
   });
 
@@ -46,6 +46,12 @@ describe('HeaderComponent', () => {
     spyOn(component, 'onLogout');
     component.onLogout();
     expect(component.onLogout).toHaveBeenCalledTimes(1);
+  });
+
+  it('should called onTranslate() and language should be changed', () => {
+    spyOn(component, 'onTranslate');
+    component.onLogout();
+    expect(component.lang).toEqual(component.authService.lang);
   });
 
   it('should called onTranslate()', () => {
