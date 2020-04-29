@@ -1,6 +1,6 @@
 import * as firebase from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { Injectable } from '@angular/core';
+import { Injectable, Optional } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
@@ -14,10 +14,10 @@ export class AuthService {
 
   constructor(public afAuth: AngularFireAuth,
     private router: Router,
-    public translate: TranslateService) {
+    @Optional() public translate: TranslateService) {
 
     translate.addLangs(['en', 'ru']);
-    translate.setDefaultLang('en');
+    translate.setDefaultLang('en'); 
 
     const browserLang = translate.getBrowserLang();
 
