@@ -14,8 +14,7 @@ import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
                 *ngIf="!inputForm.get('email').valid && inputForm.get('email').touched"
                 class="help-block">Invalid email structure!</span>
   </form>
-  `,
-  styleUrls: ['./input-button-unit.component.css']
+  `
 })
 export class InputButtonUnitComponent implements OnInit {
   title = 'lembersk@yahoo.com';
