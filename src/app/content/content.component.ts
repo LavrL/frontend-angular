@@ -5,4 +5,14 @@ import { Component } from '@angular/core';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css']
 })
-export class ContentComponent {}
+export class ContentComponent {
+  mainInvoiceText: string = "Invoices";
+  reviewInvoice: string = "Review all invoices >";
+  allInvoicesDone: string = "All invoices are done";
+  discountTitle: string = "Discounts for You and Your friend!"
+
+  steps = ["Step 1: Call", "Step 2: Talk", "Step 3: Deliver"];
+  btnReceive: string = "Receive discount";
+  randomText: string = "Lorem ipsum dolor sit amet consectetur, adipisicing elit.";
+  receiveButton: string = "Receive discount";
+}

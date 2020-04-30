@@ -14,10 +14,10 @@ export class AuthService {
 
   constructor(public afAuth: AngularFireAuth,
     private router: Router,
-    @Optional() public translate: TranslateService) {
+    public translate: TranslateService) {
 
     translate.addLangs(['en', 'ru']);
-    translate.setDefaultLang('en'); 
+    translate.setDefaultLang('en');
 
     const browserLang = translate.getBrowserLang();
 
