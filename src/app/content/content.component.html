@@ -22,11 +22,11 @@
         </ul>
       </div>
       <div class="main__discounts-button">
-        <button class="btn btn-warning">{{ btnReceive }}</button>
+        <button class="btn btn-warning">{{ btnReceiveDiscount }}</button>
       </div>
     </div>
     <div [ngClass]="['header-right']">
-      <p class="main__discounts-title"> {{ btnReceive }}</p>
+      <p class="main__discounts-title"> {{ discountOfMonth }}</p>
       <ul class="main__discounts-content">
         <li class="main__discounts-item" *ngFor="let i of [].constructor(3)">
           <img class="main__discounts-steps-image" src="../../assets/hilton_icon.png" alt="">
@@ -34,7 +34,7 @@
         </li>
       </ul>
       <div class="main__discounts-button">
-        <button class="btn btn-warning">{{ receiveButton }}</button>
+        <button class="btn btn-warning">{{ btnReceiveDiscount }}</button>
       </div>
     </div>
   </div>

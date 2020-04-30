@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {
@@ -24,8 +23,6 @@ describe('FooterComponent', () => {
   });
 
   it('should contain contact info in footer', () => {
-    fixture = TestBed.createComponent(FooterComponent);
-    fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
 
     expect(compiled.querySelector('li').textContent).toContain('E-services, 2020');
