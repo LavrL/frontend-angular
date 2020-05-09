@@ -1,10 +1,12 @@
 .textfield {
   display: none;
 }
+
 .button {
   background-color: transparent;
   border: none;
 }
+
 .close {
   float: none;
 }

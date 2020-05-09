@@ -1,9 +1,9 @@
-import { TodoListService } from '../services/todo-list.service';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { ListManagerComponent } from './list-manager.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ListManagerComponent } from './list-manager.component';
 import { ListManagerModule } from './list-manager.module';
+import { TodoListService } from '../services/todo-list.service';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 describe('ListManagerComponent', () => {
   let component: ListManagerComponent;
@@ -27,7 +27,6 @@ describe('ListManagerComponent', () => {
 
     let listManagerComponent: ListManagerComponent;
     let todoListService: TodoListService;
-
     listManagerComponent = new ListManagerComponent(todoListService);
   });
 
@@ -37,13 +36,11 @@ describe('ListManagerComponent', () => {
 
   it('should add new item', () => {
     component.addItem('item1');
-
     expect(component.todoList.length).toEqual(3);
   });
 
   it('should remove item', () => {
-    component.removeItem({title: 'email1@inbox.com'});
-
+    component.removeItem({ title: 'email1@inbox.com' });
     expect(component.todoList.length).toEqual(1);
   });
 

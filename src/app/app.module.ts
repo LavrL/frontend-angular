@@ -1,32 +1,31 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { environment } from '../environments/environment';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AuthGuard } from '../core/auth-guard.service';
+import { AuthService } from '../core/auth.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { ContentComponent } from './content/content.component';
+import { DialogComponent } from './service-tab/dialog/dialog.component';
+import { DialogDirective } from '../app/service-tab/dialog/dialog.directive';
+import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ListManagerModule } from './profile-tab/list-manager/list-manager.module';
+import { NgModule } from '@angular/core';
+import { ProfileTabComponent } from './profile-tab/profile-tab.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+import { ServiceTabComponent } from './service-tab/service-tab.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { Routes, RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from '../core/auth.service';
-import { AuthGuard } from '../core/auth-guard.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { ContentComponent } from './content/content.component';
-import { ServiceTabComponent } from './service-tab/service-tab.component';
-import { DialogComponent } from './service-tab/dialog/dialog.component';
-import { ListManagerModule } from './profile-tab/list-manager/list-manager.module';
 import { TodoListService } from './profile-tab/services/todo-list.service';
-import { ProfileTabComponent } from './profile-tab/profile-tab.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DialogDirective } from '../app/service-tab/dialog/dialog.directive';
-import { FormsModule } from '@angular/forms';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { environment } from '../environments/environment';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
@@ -46,15 +45,15 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SigninComponent,
-    SignupComponent,
-    HeaderComponent,
-    FooterComponent,
     ContentComponent,
+    DialogComponent,
+    DialogDirective,
+    FooterComponent,
+    HeaderComponent,
     ProfileTabComponent,
     ServiceTabComponent,
-    DialogComponent,
-    DialogDirective
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

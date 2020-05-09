@@ -2,8 +2,8 @@ import { ProfileTabComponent } from './profile-tab.component';
 
 describe('ProfileTabComponent', () => {
   let profileTab: ProfileTabComponent;
-  let addAddressClicked = false;
-  let open = false;
+  // let addAddressClicked = false;
+  // let open = false;
 
   beforeEach(() => {
     profileTab = new ProfileTabComponent();

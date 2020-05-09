@@ -10,10 +10,10 @@ import { ToDoItem } from '../interfaces/todo-item';
       <app-todo-item [item]="todoItem" (delete)="removeItem($event)"></app-todo-item>
     </li>
   </ul>
-  <app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
-  `,
+  <app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>`,
   styleUrls: ['./list-manager.component.css']
 })
+
 export class ListManagerComponent implements OnInit {
   todoList: ToDoItem[] = [];
 

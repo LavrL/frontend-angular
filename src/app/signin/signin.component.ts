@@ -1,7 +1,7 @@
-import { Component, OnInit, NgZone } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthService } from '../../core/auth.service';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -27,11 +27,11 @@ export class SigninComponent implements OnInit {
   }
   userLogin(value: { email: string, password: string }) {
     this.authService.doLogin(value).subscribe(
-      res => {
+      () => {
         this.signinForm.reset();
         this.router.navigate(['/user']);
       },
-      err => {
+      () => {
         this.errorMessage = 'Invalid username or password';
         this.signinForm.reset();
       }
@@ -40,21 +40,21 @@ export class SigninComponent implements OnInit {
 
   googleLogin() {
     this.ngZone.run(() => this.authService.doGoogleLogin().subscribe(
-      res => { this.ngZone.run(() => this.router.navigate(['/user'])); },
+      () => { this.ngZone.run(() => this.router.navigate(['/user'])); },
       err => { console.log(err); }
     ));
   }
 
   facebookLogin() {
     this.ngZone.run(() => this.authService.doFacebookLogin().subscribe(
-      res => { this.ngZone.run(() => this.router.navigate(['/user'])); },
+      () => { this.ngZone.run(() => this.router.navigate(['/user'])); },
       err => { console.log(err); }
     ));
   }
 
   twitterLogin() {
     this.ngZone.run(() => this.authService.doTwitterLogin().subscribe(
-      res => { this.ngZone.run(() => this.router.navigate(['/user'])); },
+      () => { this.ngZone.run(() => this.router.navigate(['/user'])); },
       err => { console.log(err); }
     ));
   }

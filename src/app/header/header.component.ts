@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { AuthService } from '../../core/auth.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +14,7 @@ export class HeaderComponent {
   onLogout() {
     this.authService.logout();
   }
+  
   onTranslate() {
     this.authService.doTranslate();
     this.lang = this.authService.lang;

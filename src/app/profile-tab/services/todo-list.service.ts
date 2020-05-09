@@ -1,4 +1,4 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { ToDoItem } from '../interfaces/todo-item';
 
 @Injectable({
@@ -22,4 +22,3 @@ export class TodoListService {
     this.todoList.splice(index, 1);
   }
 }
-

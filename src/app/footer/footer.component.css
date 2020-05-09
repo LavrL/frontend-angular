@@ -1,8 +1,8 @@
 .footer {
   background-color: #eeeeee;
   border-top: 5px solid #fca311;
-
 }
+
 .contact-list {
   padding-top: 10px;
   display: flex;
@@ -12,6 +12,7 @@
   list-style-type: none;
   color: #273747;
 }
+
 .phone {
   color: #273747;
   text-decoration: none;
@@ -21,10 +22,12 @@
   color: #559AD1;
   padding-right: 5px;
 }
+
 .fa-gp-style {
   color: red;
   padding-right: 5px;
 }
+
 .fa-tw-style {
   color: lightskyblue;
 }

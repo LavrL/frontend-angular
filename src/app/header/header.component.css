@@ -11,6 +11,7 @@
 .header .title-left {
   font-size: 26px;
 }
+
 .header .middle-side {
   font-size: 20px;
   align-items: baseline;
@@ -24,10 +25,12 @@
   align-items: center;
   display: flex;
 }
+
 .header .right-side {
   display: flex;
   flex-direction: row;
 }
+
 .lang {
   font-size: 18px;
   padding-right: 15px;
@@ -38,9 +41,11 @@
   align-items: center;
   display: flex;
 }
-.lang:hover{
+
+.lang:hover {
   text-decoration: underline;
 }
+
 .link-style {
   color: #273747;
   text-decoration: none;

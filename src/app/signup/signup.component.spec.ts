@@ -1,14 +1,13 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { SignupComponent } from './signup.component';
-import { TranslateModule } from '@ngx-translate/core';
-import { AuthService } from '../../core/auth.service';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
-import { environment } from '../../environments/environment';
-import { Routes, RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from '../../core/auth.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+import { SignupComponent } from './signup.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { environment } from '../../environments/environment';
 
 const appRoutes: Routes = [];
 
@@ -50,7 +49,5 @@ describe('SignupComponent', () => {
     component.registerNewUser(value);
     expect(component.registerNewUser).toHaveBeenCalledWith(value)
     expect(component.registerNewUser).toHaveBeenCalledTimes(1);
-
   });
-
 })

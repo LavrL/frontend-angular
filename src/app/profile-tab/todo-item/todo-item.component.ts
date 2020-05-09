@@ -1,6 +1,5 @@
 import { Component, Input, Output, ViewChild, EventEmitter, ElementRef } from '@angular/core';
 import { ToDoItem } from '../interfaces/todo-item';
-//import { AppModule } from 'src/app/app.module';
 
 @Component({
   selector: 'app-todo-item',
@@ -13,16 +12,17 @@ import { ToDoItem } from '../interfaces/todo-item';
   </button>`,
   styleUrls: ['./todo-item.component.css']
 })
+
 export class TodoItemComponent {
   @Input() item: ToDoItem;
   @Output() delete: EventEmitter<ToDoItem> = new EventEmitter();
   @ViewChild('textInput', { static: true }) textInput: ElementRef;
 
   isActive = false;
+
   constructor() { }
 
   removeItem() {
     this.delete.emit(this.item);
   }
-
 }

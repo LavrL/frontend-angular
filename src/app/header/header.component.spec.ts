@@ -1,12 +1,11 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { HeaderComponent } from './header.component';
-import { TranslateModule } from '@ngx-translate/core';
-import { AuthService } from '../../core/auth.service';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
-import { environment } from '../../environments/environment';
+import { AuthService } from '../../core/auth.service';
+import { HeaderComponent } from './header.component';
 import { Routes, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { environment } from '../../environments/environment';
 
 const appRoutes: Routes = [];
 

@@ -1,12 +1,15 @@
 <header class="header">
+
   <div class="title-left">
     <a routerLink="" class="link-style">E-services</a>
   </div>
+
   <div class="middle-side">
-      <a routerLink="/content" *ngIf="authService.isAuth()" class="link-style">Home </a>
-      <a routerLink="/profile-tab" *ngIf="authService.isAuth()" class="link-style">Profile </a>
-      <a routerLink="/service-tab" *ngIf="authService.isAuth()" class="link-style">Service </a>
+    <a routerLink="/content" *ngIf="authService.isAuth()" class="link-style">Home </a>
+    <a routerLink="/profile-tab" *ngIf="authService.isAuth()" class="link-style">Profile </a>
+    <a routerLink="/service-tab" *ngIf="authService.isAuth()" class="link-style">Service </a>
   </div>
+
   <div class="right-side">
     <ng-template [ngIf]="!authService.isAuth()">
       <button type="button" class="btn btn-outline-warning btn-md">
@@ -15,9 +18,9 @@
     <a (click)="onTranslate()" routerLink="#" class="lang input-form__link input-form__link_underlined">{{ lang }}</a>
 
     <div class="title_logout">
-
       <a *ngIf="authService.isAuth()" class="link-style" (click)="onLogout()">
         Logout</a>
     </div>
+
   </div>
 </header>

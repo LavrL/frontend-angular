@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { trigger, style, animate, transition } from '@angular/animations';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
+import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-dialog',

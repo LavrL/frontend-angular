@@ -14,6 +14,7 @@ export class ProfileTabComponent {
   addAddressClicked = false;
 
   emails = ['lembersk@yahoo.com', 'tco570@inbox.lv'];
+
   changeDivSize() {
     if (this.open) {
       this.height = 100;
@@ -27,6 +28,7 @@ export class ProfileTabComponent {
       this.full = true;
     }
   }
+  
   addAddress() {
     if (this.addAddressClicked) {
       this.addAddressClicked = false;
